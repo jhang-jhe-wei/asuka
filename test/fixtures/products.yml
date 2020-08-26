@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_maker: MyString
+  car_type: MyString
+  start_year: MyString
+  end_year: MyString
+  size: MyString
+
+two:
+  car_maker: MyString
+  car_type: MyString
+  start_year: MyString
+  end_year: MyString
+  size: MyString
