@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Car maker:</strong>
+  <%= @product.car_maker %>
+</p>
+
+<p>
+  <strong>Car type:</strong>
+  <%= @product.car_type %>
+</p>
+
+<p>
+  <strong>Start year:</strong>
+  <%= @product.start_year %>
+</p>
+
+<p>
+  <strong>End year:</strong>
+  <%= @product.end_year %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @product.size %>
+</p>
+<% if current_user&&current_user.admin %>
+	<%= link_to 'Edit', edit_product_path(@product) %> |
+<% end %>
+<%= link_to 'Back', products_path %>
