@@ -4,7 +4,8 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first)i
+User.create(email: "admin@gmail.com",password: "123456",admin: true)
 Product.create(car_maker: "Toyota",car_type: "Altis(11代)",start_year: "2014",end_year: "2016",size: "10吋")
 Product.create(car_maker: "Toyota",car_type: "Altis(11.5代)",start_year: "2017",end_year: "9999",size: "10吋")
 Product.create(car_maker: "Toyota",car_type: "Altis(10代)",start_year: "2009",end_year: "2013",size: "9吋")
