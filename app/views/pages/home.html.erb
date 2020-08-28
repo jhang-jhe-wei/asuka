@@ -3,6 +3,7 @@
 		<%= link_to 'sign out',destroy_user_session_path,
 			method: :delete%>
 		<%= link_to 'product view',products_path%>
+		<%= link_to 'search',search_path%>
 	<% else%>		
 		<%= link_to 'sign in',new_user_session_path %>
 

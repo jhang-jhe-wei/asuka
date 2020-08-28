@@ -1,25 +1,107 @@
-<h2>Log in</h2>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="q4Z+1oOPRI9PQXZpRrGon2tr1X0vtiXfLLzHw2Ch8pmWgo3RGC9riIwPduP1+UdVkxDfpo3wYd00Y5KQfbZz0g==" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" >
+
+    <link rel="stylesheet" media="all" href="/assets/application-04c3ae28f07e1bf734223bf526d0cdd296440ef53bcb3f80b9f093c6bf02f747.css" data-turbolinks-track="reload" />
+    <script src="/packs/js/application-dd6e88065a32b23f8e21.js" data-turbolinks-track="reload"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap');
+        *{
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        #topic_login{
+            font-size: 3em;
+        }
+        #topic_logo{
+            width:100vw;
+        }
+        #logo{
+            width:50%;
+            padding-left: 20%;
+            margin-top: 20%;
+            margin-bottom: 0px;
+        }
+        #lbl_email{
+            display: none;
+        }
+        #lbl_pwd{
+            display: none;
+        }
+        #user_email, #user_password{
+            width:85%;
+            border-radius:  25px;
+            border:1px solid #333;
+            font-size: 20px;
+            padding:10px 10px 10px 10px;
+        }
+        #new_user{
+            text-align: center;
+            width:75%;
+            margin:0 auto;
+        }
+        #remember_me{
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        #btn_login{
+            width:60%;
+            font-size: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-top: 10%;
+
+        }
+        #emailtest{
+            margin-top: 15%;
+        }
+        a{
+            color:black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+    </style>
+  </head>
+
+  <body>
+	  <p calss= "notice"></p>
+
+	  <p calss= "alert"></p>
+      <div id="topic_logo"><img id="logo" src="src/header-logo.png" /></div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field" id="emailtest">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <label for="user_email" id="lbl_email">Email</label><br />
+    <input autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]" id="user_email" />
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <label for="user_password" id="lbl_pwd">Password</label><br />
+    <input autocomplete="current-password" type="password" name="user[password]" id="user_password" />
   </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="field" style="text-align: left;" id="remember_me">
+      <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+      <label for="user_remember_me">記住帳號</label>
     </div>
-  <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <input type="submit" name="commit" value="登入" data-disable-with="Log in" id="btn_login" />
   </div>
 <% end %>
+<div style="text-align: center; width:100%; margin-top: 20%;" >
+  <a href="/users/sign_up">註冊</a><br />
 
-<%= render "devise/shared/links" %>
+  <a href="/users/password/new">忘記密碼？</a><br />
+
+</div>
+
+
+
+  </body>
+</html>

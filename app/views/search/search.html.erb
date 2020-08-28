@@ -1,0 +1,14 @@
+<h1>Search</h1>
+
+<%= form_tag '/search' do %>
+  CAR_MAKER：<%= text_field_tag 'car_maker' %><br />
+  CAR_TYPE :<%= text_field_tag 'car_type'%><br />
+  YEAR :<%= text_field_tag 'car_year'%><br />
+  <%= submit_tag "查詢" %>
+<% end %>
+<p id="notice"><%= notice %></p>
+
+<% if current_user&&current_user.admin %>
+<%= link_to 'New Product', new_product_path %>
+<% end %>
+<%= link_to 'Home', root_path %>
