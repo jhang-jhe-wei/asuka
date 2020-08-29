@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :orders
+  get 'checkout',to: 'orders#checkout'
   get 'carts/add'
   resources :products
   root to: 'pages#home'

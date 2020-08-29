@@ -2,6 +2,12 @@
 
 one:
   state: MyString
+  user: one
+  product: one
+  quantity: 
 
 two:
   state: MyString
+  user: two
+  product: two
+  quantity: 
