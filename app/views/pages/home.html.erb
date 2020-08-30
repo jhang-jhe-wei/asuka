@@ -30,6 +30,7 @@
 		font-size: 3.5em;
 		border-radius: 2em;
 		transition-duration: 0.5s;
+		margin-top: 5%;
 	}
 	a:hover{
 		background-color: #fff;
@@ -47,14 +48,14 @@
 		
 		<div class="center">
 			<%= link_to '登出',destroy_user_session_path,
-				method: :delete, class => 'm-top-5'%>
-			<%= link_to '商品瀏覽',products_path, class => 'm-top-1'%>
-			<%= link_to '搜尋',search_path, class => 'm-top-1'%>
-			<%= link_to '訂單資訊',orders_path, class => 'm-top-1'%>
+				method: :delete%>
+			<%= link_to '商品瀏覽',products_path%>
+			<%= link_to '搜尋',search_path%>
+			<%= link_to '訂單資訊',orders_path%>
         </div>
 	<% else%>	
 		<div class="center">	
-			<%= link_to '登入',new_user_session_path, class => 'm-top-5' %>
-			<%= link_to '註冊',new_user_registration_path, class => 'm-top-1' %>
+			<%= link_to '登入',new_user_session_path %>
+			<%= link_to '註冊',new_user_registration_path%>
 		</div>
 	<% end%>
