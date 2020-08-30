@@ -1,29 +1,40 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>State:</strong>
+  <strong>狀態：</strong>
   <%= @order.state %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @order.user_id %>
+  <strong>使用者信箱：</strong>
+  <%= @order.user.email %>
 </p>
 
 <p>
-  <strong>Product:</strong>
-  <%= @order.product_id %>
+  <strong>車牌：</strong>
+  <%= @order.product.car_maker %>
 </p>
 
 <p>
-  <strong>Quantity:</strong>
+  <strong>車型：</strong>
+  <%= @order.product.car_type %>
+</p>
+
+<p>
+  <strong>年份：</strong>
+  <%= "#{@order.product.start_year}~#{@order.product.end_year}" %>
+</p>
+
+<p>
+  <strong>數量：</strong>
   <%= @order.quantity %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>價格：</strong>
   <%= @order.product.price * @order.quantity %>
 </p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<% if current_user&&current_user.admin %>
+<%= link_to '編輯', edit_order_path(@order) %>
+<% end %>
+<%= link_to '返回', orders_path %>

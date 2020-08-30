@@ -5,12 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Car maker</th>
-      <th>Car type</th>
-      <th>Start year</th>
-      <th>End year</th>
-      <th>Size</th>
-      <th>Price</th>
+      <th>車牌</th>
+      <th>車型</th>
+      <th>年份</th>
+      <th>產品尺寸</th>
+      <th>價格</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,16 +19,15 @@
       <tr>
         <td><%= product.car_maker %></td>
         <td><%= product.car_type %></td>
-        <td><%= product.start_year %></td>
-        <td><%= product.end_year %></td>
+        <td><%= "#{product.start_year}~#{product.end_year}" %></td>
         <td><%= product.size %></td>
         <td><%= product.price %></td>
-	<td><%= link_to 'Show', product %></td>
+	<td><%= link_to '內容', product %></td>
 	<% if current_user&&current_user.admin %>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '編輯', edit_product_path(product) %></td>
+        <td><%= link_to '刪除', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	<% else %>
-        <td><%= link_to 'Add to Car', add_cart_path(product),method: "post" %></td>
+        <td><%= link_to '新增至購物車', add_cart_path(product),method: "post" %></td>
 	<% end %>
       </tr>
     <% end %>
@@ -37,9 +35,12 @@
 </table>
 
 <br>
-<% if current_user&&current_user.admin %>
-<%= link_to 'New Product', new_product_path %>
+<% if current_user.admin %>
+<%= link_to '新增產品', new_product_path %>
+<%= link_to '訂單資訊', orders_path %>
+<% elsf current_user %>
+<%= link_to '購物車', cart_path %>
+<%= link_to '訂單資訊', orders_path %>
 <% end %>
-<%= link_to 'Cart', cart_path %>
-<%= link_to '清空購物車', cart_path, method: :delete, class: "btn btn-default btn-danger" %>
-<%= link_to 'Home', root_path %>
+<%= link_to '搜尋', search_path %>
+<%= link_to '首頁', root_path %>

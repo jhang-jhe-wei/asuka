@@ -1,11 +1,11 @@
-<h1>Pages#home</h>
+<h1>Asuka Demo</h1>
 	<% if current_user %>
-		<%= link_to 'sign out',destroy_user_session_path,
+		<%= link_to '登出',destroy_user_session_path,
 			method: :delete%>
-		<%= link_to 'product view',products_path%>
-		<%= link_to 'search',search_path%>
+		<%= link_to '商品瀏覽',products_path%>
+		<%= link_to '搜尋',search_path%>
+		<%= link_to '訂單資訊',orders_path%>
 	<% else%>		
-		<%= link_to 'sign in',new_user_session_path %>
-
-		<%= link_to 'sign up',new_user_registration_path %>
+		<%= link_to '登入',new_user_session_path %>
+		<%= link_to '註冊',new_user_registration_path %>
 	<% end%>
