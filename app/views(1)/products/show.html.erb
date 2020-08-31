@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>車牌：</strong>
+  <%= @product.car_maker %>
+</p>
+
+<p>
+  <strong>車種：</strong>
+  <%= @product.car_type %>
+</p>
+
+<p>
+  <strong>年分：</strong>
+  <%= "#{@product.start_year}~#{@product.end_year}" %>
+</p>
+
+<p>
+  <strong>產品尺寸：</strong>
+  <%= @product.size %>
+</p>
+
+<p>
+  <strong>價格：</strong>
+  <%= @product.price %>
+</p>
+<% if current_user&&current_user.admin %>
+	<%= link_to '編輯', edit_product_path(@product) %>
+<% else %>
+       <%= link_to '加入購物車', add_cart_path(@product),method: "post" %>
+<% end %>
+<%= link_to '返回', products_path %>
