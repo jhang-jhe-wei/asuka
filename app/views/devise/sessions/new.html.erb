@@ -1,5 +1,12 @@
 
-
+<style>
+  .field label{
+    color:white;
+    line-height: 30px;
+    font-size: 20px;
+    display:inline block;
+  }
+</style>
 <h2 class="lbl_logo">登入</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field" id="emailtest">
@@ -13,7 +20,7 @@
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
-      <div id="lbl_remember"><%= f.label :remember_me %></div>
+      <%= f.label :remember_me %>
     </div>
   <% end %>
 
