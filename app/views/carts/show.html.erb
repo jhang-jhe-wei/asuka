@@ -36,9 +36,7 @@ th, td{
 
 <h1 class="lbl_logo">購物車</h1>
 
-<%= link_to '清空購物車', cart_path, method: :delete, class: "btn btn-default btn-danger", :class=>'btn_big btn_orange' %>
-
-<table class="table table-hover">
+<table>
   <thead>
     <tr>
       <td>商品名稱</td>
@@ -65,4 +63,6 @@ th, td{
 </table>
 
 <%= link_to '繼續選購', products_path, class: "btn btn-default btn_big" %>
+<%= link_to '清空購物車', cart_path, method: :delete, class: "btn btn-default btn-danger", :class=>'btn_big btn_orange' %>
+
 <%= link_to '結帳', checkout_path, class: "btn btn-default btn_big btn_orange" %>
