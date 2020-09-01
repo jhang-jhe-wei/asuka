@@ -1,5 +1,4 @@
 
-
 <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
@@ -14,36 +13,36 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :車牌, :class=>'lbl_normal' %>
-    <%= form.text_field :car_maker, :class=>'tbx_normal' %>
+    <%= form.label :車牌 %>
+    <%= form.text_field :car_maker %>
   </div>
 
   <div class="field">
-    <%= form.label :車型, :class=>'lbl_normal' %>
-    <%= form.text_field :car_type, :class=>'tbx_normal' %>
+    <%= form.label :車型 %>
+    <%= form.text_field :car_type %>
   </div>
 
   <div class="field">
-    <%= form.label :開始年份, :class=>'lbl_normal' %>
-    <%= form.text_field :start_year, :class=>'tbx_normal' %>
+    <%= form.label :開始年份 %>
+    <%= form.text_field :start_year %>
   </div>
 
   <div class="field">
-    <%= form.label :結束年份, :class=>'lbl_normal' %>
-    <%= form.text_field :end_year, :class=>'tbx_normal' %>
+    <%= form.label :結束年份 %>
+    <%= form.text_field :end_year %>
   </div>
 
   <div class="field">
-    <%= form.label :尺寸, :class=>'lbl_normal' %>
-    <%= form.text_field :size, :class=>'tbx_normal' %>
+    <%= form.label :尺寸 %>
+    <%= form.text_field :size %>
   </div>
 
   <div class="field">
-  <%= form.label :價格, :class=>'lbl_normal' %>
-  <%= form.text_field :price, :class=>'tbx_normal' %>
+  <%= form.label :價格 %>
+  <%= form.text_field :price %>
   </div>
 
   <div class="actions">
-    <%= form.submit, :class=>'btn_big btn_orange' %>
+    <%= form.submit %>
   </div>
 <% end %>
