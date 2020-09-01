@@ -35,10 +35,7 @@ input{
   margin-top: 15%;
   transition-duration: 0.5s;
 }
-.actions input:hover{
-  background-color: #fff;
-  color:darkslategray;
-}
+
 a{
   padding:20px 25px;
   color:white;
@@ -56,22 +53,31 @@ label{
   font-size: 2.5em;
   color:white;
 }
-
+a{
+  color:white;
+}
+a:hover{
+  background-color:rgba(0,0,0,0);
+}
 </style>
 
 <div class="center>
 <h1>查詢</h1>
 
 <%= form_tag '/search' do %>
-  CAR_MAKER：<%= text_field_tag 'car_maker' %><br />
-  CAR_TYPE :<%= text_field_tag 'car_type'%><br />
-  YEAR :<%= text_field_tag 'car_year'%><br />
-  <%= submit_tag "查詢" %>
+  <%= text_field_tag 'car_maker',nil , placeholder: "汽車廠牌" %><br />
+  <%= text_field_tag 'car_type', nil, placeholder: "汽車種類" %><br />
+  <%= text_field_tag 'car_year', nil, placeholder: "年份" %><br />
+  <%= submit_tag "查詢"%><br /><br /><br />
 <% end %>
-<p id="notice"><%= notice %></p>
-
-<% if current_user&&current_user.admin %>
-<%= link_to 'New Product', new_product_path %>
+<% if current_user.admin %>
+<%= link_to '新增產品', new_product_path %><br /><br /><br />
+<%= link_to '訂單資訊', orders_path %><br /><br /><br />
+<% elsif current_user %>
+<%= link_to '購物車', cart_path %><br /><br /><br />
+<%= link_to '訂單資訊', orders_path %><br /><br /><br />
 <% end %>
-<%= link_to '返回', root_path %>
+<%= link_to '返回', products_path %><br /><br /><br />
+<%= link_to '首頁', root_path %><br /><br /><br />
 </div>
+<p id="notice"><%= notice %></p>
