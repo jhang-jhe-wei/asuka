@@ -69,11 +69,11 @@ th, td{
 
 <br>
 <% if current_user.admin %>
-<%= link_to '新增產品', new_product_path %>
-<%= link_to '訂單資訊', orders_path %>
+<%= link_to '新增產品', new_product_path, :class=>'btn_big' %>
+<%= link_to '訂單資訊', orders_path, :class=>'btn_big' %>
 <% elsif current_user %>
-<%= link_to '購物車', cart_path %>
-<%= link_to '訂單資訊', orders_path %>
+<%= link_to '購物車', cart_path, :class=>'btn_big' %>
+<%= link_to '訂單資訊', orders_path, :class=>'btn_big' %>
 <% end %>
-<%= link_to '搜尋', search_path %>
-<%= link_to '首頁', root_path %>
+<%= link_to '搜尋', search_path, :class=>'btn_big' %>
+<%= link_to '首頁', root_path, :class=>'btn_big' %>
