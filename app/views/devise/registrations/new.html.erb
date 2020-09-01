@@ -9,18 +9,18 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "電子信箱", :class => 'tbx_normal' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "電子信箱", :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "密碼(需大於六個字元)" :class => 'tbx_normal'  %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "密碼(需大於六個字元)", :class=>'tbx_normal'  %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "確認密碼" :class => 'tbx_normal'  %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "確認密碼", :class=>'tbx_normal'  %>
   </div>
   <div class="actions">
-    <%= f.submit "註冊" :class => 'btn_big btn_orange m-top-10  %>
+    <%= f.submit "註冊", :class=>'btn_big btn_orange m-top-10  %>
   </div>
 <% end %>
 
