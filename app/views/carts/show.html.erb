@@ -1,6 +1,42 @@
-<h1>購物車</h1>
 
-<%= link_to '清空購物車', cart_path, method: :delete, class: "btn btn-default btn-danger" %>
+<style>
+table{
+  color:white;
+  font-size: 25px;
+  text-align: center;
+}
+thead{
+  font-size:30px;
+}
+th, td{
+  padding:20px 10px;
+}
+.btn_small{
+     border:1px solid white;
+     display:block;
+     text-align: center;
+     font-size:25px;
+     color:white;
+     text-decoration: none;
+     padding:10px 10px;
+     transition-duration: 0.2s;
+
+}
+.btn_small:hover{
+  color:darkslategray;
+  background-color: white;
+}
+.btn_small_orange:hover{
+   background-color: orange;
+   color:white;
+}
+</style>
+
+
+
+<h1 class="lbl_logo">購物車</h1>
+
+<%= link_to '清空購物車', cart_path, method: :delete, class: "btn btn-default btn-danger", :class=>'btn_big btn_orange' %>
 
 <table class="table table-hover">
   <thead>
@@ -28,5 +64,5 @@
   </tfood>
 </table>
 
-<%= link_to '繼續選購', products_path, class: "btn btn-default" %>
-<%= link_to '結帳', checkout_path, class: "btn btn-default" %>
+<%= link_to '繼續選購', products_path, class: "btn btn-default btn_big" %>
+<%= link_to '結帳', checkout_path, class: "btn btn-default btn_big btn_orange" %>
