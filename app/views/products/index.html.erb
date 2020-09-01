@@ -1,6 +1,39 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+
+<style>
+table{
+  color:white;
+  font-size: 25px;
+  text-align: center;
+}
+thead{
+  font-size:30px;
+}
+th, td{
+  padding:20px 10px;
+}
+.btn_small{
+     border:1px solid white;
+     display:block;
+     text-align: center;
+     font-size:25px;
+     color:white;
+     text-decoration: none;
+     padding:10px 10px;
+     transition-duration: 0.2s;
+
+}
+.btn_small:hover{
+  color:darkslategray;
+  background-color: white;
+}
+.btn_small_orange:hover{
+   background-color: orange;
+   color:white;
+}
+</style>
+
+<h1 class="lbl_logo">產品</h1>
 
 <table>
   <thead>
@@ -22,12 +55,12 @@
         <td><%= "#{product.start_year}~#{product.end_year}" %></td>
         <td><%= product.size %></td>
         <td><%= product.price %></td>
-	<td><%= link_to '內容', product %></td>
+	<td><%= link_to '內容', product, :class='btn_small' %></td>
 	<% if current_user&&current_user.admin %>
-        <td><%= link_to '編輯', edit_product_path(product) %></td>
-        <td><%= link_to '刪除', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '編輯', edit_product_path(product) , :class='btn_small' %></td>
+        <td><%= link_to '刪除', product, method: :delete, data: { confirm: 'Are you sure?' } , :class='btn_small' %></td>
 	<% else %>
-        <td><%= link_to '新增至購物車', add_cart_path(product),method: "post" %></td>
+        <td><%= link_to '新增至購物車', add_cart_path(product),method: "post", :class='btn_small btn_small_orange'  %></td>
 	<% end %>
       </tr>
     <% end %>
