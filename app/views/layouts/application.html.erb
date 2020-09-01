@@ -10,9 +10,11 @@
   </head>
 
   <body>
-	  <p calss= "notice"><%= notice %></p>
+  <div class="container">
+	  <p class= "notice lbl_alert"><%= notice %></p>
 
-	  <p calss= "alert"><%= alert %></p>
+	  <p class= "alertv lbl_alert"><%= alert %></p>
     <%= yield %>
+  </div>
   </body>
 </html>

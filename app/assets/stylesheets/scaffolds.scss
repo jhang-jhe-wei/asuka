@@ -63,3 +63,47 @@ div.actions {
 
 label {
   display: block; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap');
+  *{
+      font-family: 'Noto Sans TC', sans-serif;
+  }
+  body{
+      background-color: darkslategray;
+  }
+  .lbl_logo{
+      width:100%;
+      font-size: 40px;
+      color:white;
+      text-align: center;
+      margin-top: 10%;
+  }
+  .lbl_alert{
+      width:100%;
+      font-size: 20px;
+      color:orange;
+      text-align: center;
+  }
+  .btn_big{
+      width:100%;
+      border:1px solid white;
+      display:block;
+      text-align: center;
+      font-size:30px;
+      color:white;
+      text-decoration: none;
+      padding:20px 0px;
+  }
+  .btn_big:hover{
+      color:darkslategray;
+      background-color: white;
+      transition-duration: 0.2s;
+  }
+  #btn_login{
+      margin-top: 7%;
+      border-bottom: none;
+  }
+ .container{
+     width:80%;
+      margin:0 auto;
+ }
