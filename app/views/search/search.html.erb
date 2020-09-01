@@ -5,7 +5,7 @@
   <%= text_field_tag 'car_maker',nil , placeholder: "汽車廠牌", class:'tbx_normal' %><br />
   <%= text_field_tag 'car_type', nil, placeholder: "汽車種類", class:'tbx_normal' %><br />
   <%= text_field_tag 'car_year', nil, placeholder: "年份", class:'tbx_normal' %><br /><br /><br /><br />
-  <%= submit_tag "查詢", class:'btn_big btn_orange'%><br /><br /><br />
+  <%= submit_tag "查詢", class:'btn_big btn_orange'%>
 <% end %>
 <% if current_user.admin %>
 <%= link_to '新增產品', new_product_path, :class=>'btn_big' %>
