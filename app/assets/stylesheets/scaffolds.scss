@@ -13,15 +13,7 @@ pre {
   padding: 10px;
   font-size: 11px; }
 
-a {
-  color: #000; }
 
-a:visited {
-  color: #666; }
-
-a:hover {
-  color: #fff;
-  background-color: #000; }
 
 th {
   padding-bottom: 5px; }
@@ -93,6 +85,7 @@ label {
       color:white;
       text-decoration: none;
       padding:20px 0px;
+      background-color: darkslategray;
   }
   .btn_big:hover{
       color:darkslategray;
@@ -128,4 +121,7 @@ label {
 #user_remember_me{
   height:30px;
   width:30px;
+}
+a:visited{
+  color:white;
 }
