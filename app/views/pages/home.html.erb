@@ -2,6 +2,7 @@
 	<% if current_user %>
 		
 			<h1 class="lbl_logo">飛鳥測試系統</h1>
+			<br /><br /><br /><br />
 			<%= link_to '登出',destroy_user_session_path,
 				method: :delete, :class=>'btn_big' %>
 			<%= link_to '商品瀏覽',products_path, :class=>'btn_big' %>
@@ -9,6 +10,7 @@
 			<%= link_to '訂單資訊',orders_path, :class=>'btn_big' %>
 	<% else%>	
 			<h1 class="lbl_logo">飛鳥測試系統</h1>
+			<br /><br /><br /><br />
 			<%= link_to '登入',new_user_session_path, :class=>'btn_big'  %>
 			<%= link_to '註冊',new_user_registration_path, :class=>'btn_big' %>
 	<% end%>
