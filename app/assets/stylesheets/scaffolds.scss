@@ -107,3 +107,30 @@ label {
      width:80%;
       margin:0 auto;
  }
+ .tbx_normal{
+  width:100%;
+  font-size: 25px;
+  padding:10px 20px;
+  box-sizing: border-box;   
+  border:none;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+.m-top-10{
+  margin-top: 10%;
+}
+.btn_orange:hover{
+  background-color:orange;
+  border-bottom: none;
+  color:white;
+  cursor: pointer;
+}
+#user_remember_me{
+  height:30px;
+  width:30px;
+}
+#user_remember_me label{
+  color:white;
+  line-height: 30px;
+  font-size: 20px;
+}
