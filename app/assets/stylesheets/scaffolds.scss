@@ -86,11 +86,17 @@ label {
       text-decoration: none;
       padding:20px 0px;
       background-color: darkslategray;
+      cursor: pointer;
   }
   .btn_big:hover{
       color:darkslategray;
       background-color: white;
       transition-duration: 0.2s;
+  }
+  .btn_orange:hover{
+    background-color:orange;
+    color:white;
+    transition-duration: 0.2s;
   }
   #btn_login{
       margin-top: 7%;
@@ -114,9 +120,8 @@ label {
 }
 .btn_orange:hover{
   background-color:orange;
-  border-bottom: none;
   color:white;
-  cursor: pointer;
+  transition-duration: 0.2s;
 }
 #user_remember_me{
   height:30px;
