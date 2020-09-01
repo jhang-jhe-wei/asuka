@@ -1,40 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<style>
+.lbl_normal{
+  color:white;
+  font-size: 25px;
+}
+</style>
+<h1 class="lbl_logo">訂單狀態</h1><br /><br /><br />
+<p class="lbl_normal">
   <strong>狀態：</strong>
   <%= @order.state %>
 </p>
 
-<p>
+<p class="lbl_normal">
   <strong>使用者信箱：</strong>
   <%= @order.user.email %>
 </p>
 
-<p>
+<p class="lbl_normal">
   <strong>車牌：</strong>
   <%= @order.product.car_maker %>
 </p>
 
-<p>
+<p class="lbl_normal">
   <strong>車型：</strong>
   <%= @order.product.car_type %>
 </p>
 
-<p>
+<p class="lbl_normal">
   <strong>年份：</strong>
   <%= "#{@order.product.start_year}~#{@order.product.end_year}" %>
 </p>
 
-<p>
+<p class="lbl_normal">
   <strong>數量：</strong>
   <%= @order.quantity %>
 </p>
 
-<p>
+<p class="lbl_normal">
   <strong>價格：</strong>
   <%= @order.product.price * @order.quantity %>
-</p>
+</p><br /><br /><br />
 <% if current_user&&current_user.admin %>
-<%= link_to '編輯', edit_order_path(@order) %>
+<%= link_to '編輯', edit_order_path(@order), class:'btn_big' %>
 <% end %>
-<%= link_to '返回', orders_path %>
+<%= link_to '返回', orders_path, class:'btn_big' %>
