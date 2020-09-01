@@ -1,7 +1,15 @@
+<style>
+.lbl_normal{
+  color:white;
+  font-size: 25px;
+}
+</style>
+
+
 <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <h2 class="lbl_logo"><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
       <ul>
         <% product.errors.full_messages.each do |message| %>
@@ -12,36 +20,36 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :車牌 %>
-    <%= form.text_field :car_maker %>
+    <%= form.label :車牌, :class=>'lbl_normal' %>
+    <%= form.text_field :car_maker, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= form.label :車型 %>
-    <%= form.text_field :car_type %>
+    <%= form.label :車型, :class=>'lbl_normal' %>
+    <%= form.text_field :car_type, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= form.label :開始年份 %>
-    <%= form.text_field :start_year %>
+    <%= form.label :開始年份, :class=>'lbl_normal' %>
+    <%= form.text_field :start_year, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= form.label :結束年份 %>
-    <%= form.text_field :end_year %>
+    <%= form.label :結束年份, :class=>'lbl_normal' %>
+    <%= form.text_field :end_year, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= form.label :尺寸 %>
-    <%= form.text_field :size %>
+    <%= form.label :尺寸, :class=>'lbl_normal' %>
+    <%= form.text_field :size, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-  <%= form.label :價格 %>
-  <%= form.text_field :price %>
+  <%= form.label :價格, :class=>'lbl_normal' %>
+  <%= form.text_field :price, :class=>'tbx_normal' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit, :class=>'btn_big btn_orange' %>
   </div>
 <% end %>
