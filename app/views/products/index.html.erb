@@ -55,12 +55,12 @@ th, td{
         <td><%= "#{product.start_year}~#{product.end_year}" %></td>
         <td><%= product.size %></td>
         <td><%= product.price %></td>
-	<td><%= link_to '內容', product, :class='btn_small' %></td>
+	<td><%= link_to '內容', product, :class=>'btn_small' %></td>
 	<% if current_user&&current_user.admin %>
-        <td><%= link_to '編輯', edit_product_path(product) , :class='btn_small' %></td>
-        <td><%= link_to '刪除', product, method: :delete, data: { confirm: 'Are you sure?' } , :class='btn_small' %></td>
+        <td><%= link_to '編輯', edit_product_path(product) , :class=>'btn_small' %></td>
+        <td><%= link_to '刪除', product, method: :delete, data: { confirm: 'Are you sure?' } , :class=>'btn_small' %></td>
 	<% else %>
-        <td><%= link_to '新增至購物車', add_cart_path(product),method: "post", :class='btn_small btn_small_orange'  %></td>
+        <td><%= link_to '新增至購物車', add_cart_path(product),method: "post", :class=>'btn_small btn_small_orange'  %></td>
 	<% end %>
       </tr>
     <% end %>
