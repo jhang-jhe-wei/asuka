@@ -16,7 +16,7 @@
   <div class="field">
     <%= f.password_field :password, autocomplete: "current-password", placeholder: "密碼", :class => 'tbx_normal' %>
   </div>
-
+  <br />
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
@@ -24,6 +24,8 @@
     </div>
   <% end %>
 
+  <br />
+  <br />
   <div class="actions">
     <%= f.submit "登入" , :class => 'btn_big btn_orange' %>
   </div>
