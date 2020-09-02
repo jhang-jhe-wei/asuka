@@ -63,6 +63,7 @@ label {
   body{
       background-color: darkslategray;
   }
+  @media only screen and (min-width: 769px) {
   .lbl_logo{
       width:100%;
       font-size: 40px;
@@ -70,12 +71,7 @@ label {
       text-align: center;
       margin-top: 10%;
   }
-  .lbl_alert{
-      width:100%;
-      font-size: 20px;
-      color:orange;
-      text-align: center;
-  }
+  
   .btn_big{
       width:100%;
       border:1px solid white;
@@ -88,6 +84,69 @@ label {
       background-color: darkslategray;
       cursor: pointer;
   }
+  .lbl_normal{
+    color:white;
+    font-size: 25px;
+  }
+  .tbx_normal{
+   width:100%;
+   font-size: 25px;
+   padding:10px 20px;
+   box-sizing: border-box;   
+   border:none;
+   margin-top: 20px;
+   border-radius: 25px;
+ }
+ .lbl_alert{
+     width:100%;
+     font-size: 20px;
+     color:orange;
+     text-align: center;
+ }
+}
+@media only screen and (min-width: 0px) and (max-width: 768px){
+  .lbl_logo{
+    width:100%;
+    font-size: 4.5em;
+    color:white;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.btn_big{
+    width:100%;
+    border:1px solid white;
+    display:block;
+    text-align: center;
+    font-size:3em;
+    color:white;
+    text-decoration: none;
+    padding:20px 0px;
+    background-color: darkslategray;
+    cursor: pointer;
+}
+.lbl_normal{
+  color:white;
+  font-size: 2.5em;
+}
+.tbx_normal{
+ width:100%;
+ font-size: 2.5em;
+ padding:10px 20px;
+ box-sizing: border-box;   
+ border:none;
+ margin-top: 20px;
+ border-radius: 25px;
+}
+.lbl_alert{
+   width:100%;
+   font-size: 2.5em;
+   color:orange;
+   text-align: center;
+}
+
+
+}
   .btn_big:hover{
       color:darkslategray;
       background-color: white;
@@ -98,6 +157,7 @@ label {
     color:white;
     transition-duration: 0.2s;
   }
+  
   #btn_login{
       margin-top: 7%;
       border-bottom: none;
@@ -106,15 +166,6 @@ label {
      width:80%;
       margin:0 auto;
  }
- .tbx_normal{
-  width:100%;
-  font-size: 25px;
-  padding:10px 20px;
-  box-sizing: border-box;   
-  border:none;
-  margin-top: 20px;
-  border-radius: 25px;
-}
 .m-top-10{
   margin-top: 10%;
 }
@@ -131,7 +182,5 @@ a:visited{
   color:white;
 }
 
-.lbl_normal{
-  color:white;
-  font-size: 25px;
-}
+
+
