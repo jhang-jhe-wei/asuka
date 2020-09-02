@@ -63,7 +63,7 @@ label {
   body{
       background-color: darkslategray;
   }
-  @media only screen and (min-width: 769px) {
+  @media (min-width:701px){
   .lbl_logo{
       width:100%;
       font-size: 40px;
@@ -104,7 +104,7 @@ label {
      text-align: center;
  }
 }
-@media only screen and (min-width: 0px) and (max-width: 768px){
+@media (max-width:700px){
   .lbl_logo{
     width:100%;
     font-size: 4.5em;
