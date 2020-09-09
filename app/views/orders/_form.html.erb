@@ -12,26 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :狀態 %>
-    <%= form.text_field :state %>
+  <br /><%= form.label :狀態, :class=>'lbl_normal' %><br />
+    <%= form.text_field :state, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= form.label :使用者編號 %>
-    <%= form.text_field :user_id %>
+  <br /><%= form.label :使用者編號, :class=>'lbl_normal' %><br />
+    <%= form.text_field :user_id, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= form.label :產品編號 %>
-    <%= form.text_field :product_id %>
+  <br /><%= form.label :產品編號, :class=>'lbl_normal' %><br />
+    <%= form.text_field :product_id, :class=>'tbx_normal' %>
   </div>
 
   <div class="field">
-    <%= form.label :數量 %>
-    <%= form.text_field :quantity %>
+  <br /><%= form.label :數量, :class=>'lbl_normal' %><br />
+    <%= form.text_field :quantity, :class=>'tbx_normal' %>
   </div>
 
-  <div class="actions">
+  <br /><br />
+  <div class="actions" style="width:100%; text-align:center;">
     <%= form.submit %>
   </div>
 <% end %>

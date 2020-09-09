@@ -1,6 +1,8 @@
-<h1>Editing Product</h1>
+
+
+<h1 class="lbl_logo">編輯商品</h1>
 
 <%= render 'form', product: @product %>
 
-<%= link_to '內容', @product %> |
-<%= link_to '返回', products_path %>
+<%= link_to '內容', @product, class:'btn_big' %> |
+<%= link_to '返回', products_path, class:'btn_big' %>

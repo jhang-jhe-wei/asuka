@@ -13,15 +13,7 @@ pre {
   padding: 10px;
   font-size: 11px; }
 
-a {
-  color: #000; }
 
-a:visited {
-  color: #666; }
-
-a:hover {
-  color: #fff;
-  background-color: #000; }
 
 th {
   padding-bottom: 5px; }
@@ -31,7 +23,7 @@ td {
 
 div.field,
 div.actions {
-  margin-bottom: 10px; }
+  margin-bottom: 0px; }
 
 #notice {
   color: green; }
@@ -63,3 +55,132 @@ div.actions {
 
 label {
   display: block; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap');
+  *{
+      font-family: 'Noto Sans TC', sans-serif;
+  }
+  body{
+      background-color: darkslategray;
+  }
+  @media (min-width:1024px){
+  .lbl_logo{
+      width:100%;
+      font-size: 40px;
+      color:white;
+      text-align: center;
+      margin-top: 10%;
+  }
+  
+  .btn_big{
+      width:100%;
+      border:1px solid white;
+      display:block;
+      text-align: center;
+      font-size:30px;
+      color:white;
+      text-decoration: none;
+      padding:20px 0px;
+      background-color: darkslategray;
+      cursor: pointer;
+  }
+  .lbl_normal{
+    color:white;
+    font-size: 25px;
+  }
+  .tbx_normal{
+   width:100%;
+   font-size: 25px;
+   padding:10px 20px;
+   box-sizing: border-box;   
+   border:none;
+   margin-top: 20px;
+   border-radius: 25px;
+ }
+ .lbl_alert{
+     width:100%;
+     font-size: 20px;
+     color:orange;
+     text-align: center;
+ }
+}
+@media (max-width:1023px){
+  .lbl_logo{
+    width:100%;
+    font-size: 4.5em;
+    color:white;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.btn_big{
+    width:100%;
+    border:1px solid white;
+    display:block;
+    text-align: center;
+    font-size:3em;
+    color:white;
+    text-decoration: none;
+    padding:20px 0px;
+    background-color: darkslategray;
+    cursor: pointer;
+}
+.lbl_normal{
+  color:white;
+  font-size: 2.5em;
+}
+.tbx_normal{
+ width:100%;
+ font-size: 2.5em;
+ padding:10px 20px;
+ box-sizing: border-box;   
+ border:none;
+ margin-top: 20px;
+ border-radius: 25px;
+}
+.lbl_alert{
+   width:100%;
+   font-size: 2.5em;
+   color:orange;
+   text-align: center;
+}
+
+
+}
+  .btn_big:hover{
+      color:darkslategray;
+      background-color: white;
+      transition-duration: 0.2s;
+  }
+  .btn_orange:hover{
+    background-color:orange;
+    color:white;
+    transition-duration: 0.2s;
+  }
+  
+  #btn_login{
+      margin-top: 7%;
+      border-bottom: none;
+  }
+ .container{
+     width:80%;
+      margin:0 auto;
+ }
+.m-top-10{
+  margin-top: 10%;
+}
+.btn_orange:hover{
+  background-color:orange;
+  color:white;
+  transition-duration: 0.2s;
+}
+#user_remember_me{
+  height:30px;
+  width:30px;
+}
+a:visited{
+  color:white;
+}
+
+
+

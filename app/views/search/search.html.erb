@@ -1,83 +1,18 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap');
-*{
-    font-family: 'Noto Sans TC', sans-serif;
-}
-body{
-    background-color: darkslategray;
-}
-.center{
-    width:100%;
-    text-align: center;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-h1{
-    font-size: 5em;
-    color:#fff;
-}
-input{
-  font-size: 3em;
-  padding:20px 25px;
-  border-radius: 3em;
-  margin-top: 30px;
-  width:70%;
-}
-.actions input{
 
-  padding:20px 25px;
-  background-color: darkslategray;
-  color:white;
-  border:2px white solid;
-  margin-top: 15%;
-  transition-duration: 0.5s;
-}
-
-a{
-  padding:20px 25px;
-  color:white;
-  margin-top: 15%;
-  transition-duration: 0.5s;
-  width:70%;
-  font-size: 3em;
-}
-
-#user_remember_me{
-  width:50px;
-  height:50px;
-}
-label{
-  font-size: 2.5em;
-  color:white;
-}
-a{
-  color:white;
-}
-a:hover{
-  background-color:rgba(0,0,0,0);
-}
-</style>
-
-<div class="center>
-<h1>查詢</h1>
+<h1 class="lbl_logo">搜尋</h1>
 
 <%= form_tag '/search' do %>
-  <%= text_field_tag 'car_maker',nil , placeholder: "汽車廠牌" %><br />
-  <%= text_field_tag 'car_type', nil, placeholder: "汽車種類" %><br />
-  <%= text_field_tag 'car_year', nil, placeholder: "年份" %><br />
-  <%= submit_tag "查詢"%><br /><br /><br />
+  <%= text_field_tag 'car_maker',nil , placeholder: "汽車廠牌", class:'tbx_normal' %><br />
+  <%= text_field_tag 'car_type', nil, placeholder: "汽車種類", class:'tbx_normal' %><br />
+  <%= text_field_tag 'car_year', nil, placeholder: "年份", class:'tbx_normal' %><br /><br /><br /><br />
+  <%= submit_tag "查詢", class:'btn_big btn_orange'%>
 <% end %>
 <% if current_user.admin %>
-<%= link_to '新增產品', new_product_path %><br /><br /><br />
-<%= link_to '訂單資訊', orders_path %><br /><br /><br />
+<%= link_to '新增產品', new_product_path, :class=>'btn_big' %>
+<%= link_to '訂單資訊', orders_path, :class=>'btn_big' %>
 <% elsif current_user %>
-<%= link_to '購物車', cart_path %><br /><br /><br />
-<%= link_to '訂單資訊', orders_path %><br /><br /><br />
+<%= link_to '購物車', cart_path, :class=>'btn_big' %>
+<%= link_to '訂單資訊', orders_path, :class=>'btn_big' %>
 <% end %>
-<%= link_to '返回', products_path %><br /><br /><br />
-<%= link_to '首頁', root_path %><br /><br /><br />
-</div>
-<p id="notice"><%= notice %></p>
+<%= link_to '返回', products_path, :class=>'btn_big' %>
+<%= link_to '首頁', root_path, :class=>'btn_big' %>
